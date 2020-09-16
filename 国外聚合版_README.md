@@ -12,19 +12,30 @@ https://developer.android.com/jetpack/androidx/migrate/artifact-mappings
 https://developer.android.com/jetpack/androidx/migrate/class-mappings
 
 ### 项目的buld.gradle 添加以下内容
+#### 1.5.2开始,dependencies中增加
+
+```
+classpath 'com.google.firebase:firebase-crashlytics-gradle:2.3.0'
+```
+去掉
+```
+ classpath 'io.fabric.tools:gradle:1.26.1'
+```
+完整如下
 ```gradle
 buildscript {
 
     repositories {
         maven { url 'https://maven.google.com' }
-        maven { url 'https://maven.fabric.io/public' }
         maven { url 'https://dl.bintray.com/umsdk/release' }
     }
 
     dependencies {
-        classpath 'com.google.gms:google-services:4.2.0'
-        classpath 'io.fabric.tools:gradle:1.26.1'
+        classpath 'com.google.gms:google-services:4.2.0' 
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.3.0'
     }
+    
+    
 }
 
 allprojects {
@@ -46,9 +57,14 @@ allprojects {
 ```
 ### module的build.gradle 添加以下内容
 
+#### 1.5.2开始增加
+```
+apply plugin: 'com.google.firebase.crashlytics'
+```
+完整如下
 ```gradle
 apply plugin: 'com.google.gms.google-services'
-apply plugin: 'io.fabric'
+apply plugin: 'com.google.firebase.crashlytics'
 
 dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
