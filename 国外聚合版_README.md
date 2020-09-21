@@ -289,13 +289,25 @@ EyuAdManager.getInstance().showBannerAd(MainActivity.this, (ViewGroup) findViewB
  */
 EyuAdManager.getInstance().showNativeAd(this, (ViewGroup) findViewById(R.id.rl_native), "page_view_native_ad");
 ```
+#### 添加权限
+//必须要有的权限
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+<uses-permission android:name="android.permission.GET_TASKS"/>
+```
+
 
 #### 清单文件配置
 此配置可能随SDK的升级有所变动
 ```xml
 <meta-data
 android:name="com.google.android.gms.ads.APPLICATION_ID"
-android:value="ca-app-pub-9624926763614741~6598275826" />
+android:value="@string/your_gp_app_id" />
 
 <meta-data
 android:name="com.facebook.sdk.ApplicationId"
@@ -345,11 +357,7 @@ android:value="@string/facebook_app_id" />
         <activity
         android:name="com.applovin.adview.AppLovinInterstitialActivity"/>
 
-
-
         <!-- facebook -->
-        <meta-data android:name="com.facebook.sdk.ApplicationId"
-            android:value="1907554856229772"/>
         <activity
         android:name="com.facebook.ads.AudienceNetworkActivity"
         android:hardwareAccelerated="true"
@@ -357,17 +365,6 @@ android:value="@string/facebook_app_id" />
         
 ```
 
-#### 添加权限
-//必须要有的权限
-```xml
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.READ_PHONE_STATE" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
-<uses-permission android:name="android.permission.GET_TASKS"/>
-```
 
 
 ### 代码混淆
