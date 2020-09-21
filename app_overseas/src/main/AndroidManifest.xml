@@ -88,7 +88,7 @@
 
         <!-- facebook -->
         <meta-data android:name="com.facebook.sdk.ApplicationId"
-            android:value="1907554856229772"/>
+            android:value="@string/facebook_app_id"/>
         <activity
         android:name="com.facebook.ads.AudienceNetworkActivity"
         android:hardwareAccelerated="true"

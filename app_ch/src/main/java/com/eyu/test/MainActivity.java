@@ -29,12 +29,12 @@ public class MainActivity extends AppCompatActivity implements EyuAdsListener {
         SdkHelper.initUmSdk(this, "appKey", "channel");
         SdkHelper.initAppFlyerSdk("afKey", new AppsFlyerConversionListener() {
             @Override
-            public void onInstallConversionDataLoaded(Map<String, String> map) {
+            public void onConversionDataSuccess(Map<String, Object> map) {
 
             }
 
             @Override
-            public void onInstallConversionFailure(String s) {
+            public void onConversionDataFail(String s) {
 
             }
 
