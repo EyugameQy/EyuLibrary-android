@@ -71,7 +71,7 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'com.eyu:eyulibrary:1.4.7'
+    implementation 'com.eyu:eyulibrary:1.5.3'
 
 }
 ```
@@ -89,15 +89,16 @@ SdkHelper.init(this);
 SdkHelper.initUmSdk(this, "appKey", "channel");
 SdkHelper.initAppFlyerSdk("key", new AppsFlyerConversionListener(){
 
-    @Override
-    public void onInstallConversionDataLoaded(Map<String, String> map) {
+      @Override
+     public void onConversionDataSuccess(Map<String, Object> map) {
 
-    }
+     }
 
-    @Override
-    public void onInstallConversionFailure(String s) {
+     @Override
+     public void onConversionDataFail(String s) {
 
-    }
+     }
+    
 
     @Override
     public void onAppOpenAttribution(Map<String, String> map) {
