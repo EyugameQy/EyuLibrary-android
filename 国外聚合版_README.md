@@ -31,6 +31,7 @@ buildscript {
     }
 
     dependencies {
+       classpath 'com.android.tools.build:gradle:3.5.2'
         classpath 'com.google.gms:google-services:4.2.0' 
         classpath 'com.google.firebase:firebase-crashlytics-gradle:2.3.0'
     }
@@ -119,9 +120,11 @@ EyuRemoteConfigHelper.fetchRemoteConfig();
 
 ```
 
-#### 广告配置
+#### 广告配置与初始化
+#### 配置
+配置文件放在res/raw下，具体见demo  app_overseas
+#### 初始化
 ```java
-    private void initAdConfig() {
         AdConfig adConfig = new AdConfig();
         /**
          * 广告位
@@ -133,16 +136,7 @@ EyuRemoteConfigHelper.fetchRemoteConfig();
          *     "desc": "首页插屏"
          *   }
          */
-
-        public static String NETWORK_FACEBOOK = "facebook";
-        public static String NETWORK_ADMOB = "admob";
-        public static String NETWORK_UNITY = "unity";
-        public static String NETWORK_VUNGLE = "vungle";
-        public static String NETWORK_APPLOVIN = "applovin";
-        public static String NETWORK_IRONSOURCE = "ironsource";
-        public static String NETWORK_MINTEGRAL = "mintegral";
-
-        adConfig.setAdPlaceConfigStr(EyuRemoteConfigHelper.readRawString(this, R.raw.ad_setting));
+        adConfig.setAdPlaceConfigStr(SdkHelper.readRawString(this, R.raw.ad_setting));
         /**
          * 广告key配置
          * [
@@ -152,7 +146,7 @@ EyuRemoteConfigHelper.fetchRemoteConfig();
          * {"id":"adys_ba","key":"ca-app-pub-3940256099942544/6300978111","network":"admob"}
          * ]
          */
-        adConfig.setAdKeyConfigStr(EyuRemoteConfigHelper.readRawString(this, R.raw.ad_key_setting));
+        adConfig.setAdKeyConfigStr(SdkHelper.readRawString(this, R.raw.ad_key_setting));
 
         /**
          * 广告位中广告的缓存池，id与广告位id对应
@@ -166,62 +160,60 @@ EyuRemoteConfigHelper.fetchRemoteConfig();
          *     "type": "interstitialAd"
          *   }
          */
-        adConfig.setAdGroupConfigStr(EyuRemoteConfigHelper.readRawString(this, R.raw.ad_cache_setting));
-        adConfig.setAdmobClientId("");
-        adConfig.setUnityClientId("");
-        adConfig.setVungleClientId("");
+        adConfig.setAdGroupConfigStr(SdkHelper.readRawString(this, R.raw.ad_cache_setting));
+//        adConfig.setAdmobClientId("");
+//        adConfig.setUnityClientId("");
+//        adConfig.setVungleClientId("");
 //        adConfig.setTtClientId("5010560");
-        //设置Admob测试设备
-        adConfig.setTestParams(TestParams.builder(true)
-                .addAdmobTestDevice(""));
+//        adConfig.setMaxTryLoadRewardAd(1);
+//        adConfig.setMaxTryLoadNativeAd(1);
+//        adConfig.setMaxTryLoadInterstitialAd(1);
+//        adConfig.setTestParams(TestParams.builder(true)
+//                .addAdmobTestDevice(""));
         adConfig.setFbNativeAdClickAreaControl(true);
-        adConfig.setReportEvent(true);    
+        adConfig.setReportEvent(true);
+        EyuAdManager.getInstance().config(MainActivity.this, adConfig, new EyuAdsListener() {
+            @Override
+            public void onAdReward(String type, String placeId) {
+
+            }
+
+            @Override
+            public void onAdLoaded(String type, String placeId) {
+
+            }
+
+            @Override
+            public void onAdShowed(String type, String placeId) {
+            }
+
+            @Override
+            public void onAdClosed(String type, String placeId) {
+
+            }
+
+            @Override
+            public void onAdClicked(String type, String placeId) {
+
+            }
+
+            @Override
+            public void onDefaultNativeAdClicked() {
+
+            }
+
+            @Override
+            public void onAdLoadFailed(String placeId, String key, int code) {
+
+            }
+
+            @Override
+            public void onImpression(String type, String placeId) {
+
+            }
+        });
     }
-    
-```
-#### 广告初始化
-```java
-//这一步比较耗时
-EyuAdManager.getInstance().config(MainActivity.this, adConfig, new EyuAdsListener() {
-    @Override
-    public void onAdReward(String type, String placeId) {
-
-    }
-
-    @Override
-    public void onAdLoaded(String type, String placeId) {
-
-    }
-
-    @Override
-    public void onAdShowed(String type, String placeId) {
-    }
-
-    @Override
-    public void onAdClosed(String type, String placeId) {
-
-    }
-
-    @Override
-    public void onAdClicked(String type, String placeId) {
-
-    }
-
-    @Override
-    public void onDefaultNativeAdClicked() {
-
-    }
-
-    @Override
-    public void onAdLoadFailed(String placeId, String key, int code) {
-
-    }
-
-    @Override
-    public void onImpression(String type, String placeId) {
-
-    }
-});
+   
 ```
 
 #### 生命周期处理
