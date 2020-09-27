@@ -293,7 +293,6 @@ EyuAdManager.getInstance().showNativeAd(this, (ViewGroup) findViewById(R.id.rl_n
 <uses-permission android:name="android.permission.GET_TASKS"/>
 ```
 
-
 #### 清单文件配置
 此配置可能随SDK的升级有所变动
 ```xml
@@ -313,15 +312,7 @@ EyuAdManager.getInstance().showNativeAd(this, (ViewGroup) findViewById(R.id.rl_n
         android:allowBackup="true"
         android:fullBackupContent="false"
         tools:replace="android:fullBackupContent">
-        <activity
-            android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+       
         <!--Google Play Services -->
         <meta-data
             android:name="com.google.android.gms.version"
