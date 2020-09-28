@@ -384,7 +384,10 @@ EyuAdManager.getInstance().showNativeAd(this, (ViewGroup) findViewById(R.id.rl_n
 如果您希望使用实际投放的广告进行更严格的测试，那么您现在可以将您的设备配置为测试设备
 系统会自动将 Android 模拟器配置为测试设备
 
-检查 logcat 输出，过滤TestDevice查找设备id，并加入的初始化的代码当中
+检查 logcat 输出，过滤addTestDevice查找设备id，并加入的初始化的代码当中
+```
+I/Ads: Use AdRequest.Builder.addTestDevice("68F0142924806103623C22CBA2697DB1") to get test ads on this device.
+```
 重新运行您的应用。如果广告是 Google 广告，则您会在广告（横幅广告、插页式广告或激励视频广告）顶部的中间部分看到一个“测试广告”标签：
 ### 代码混淆
 如果您需要使用proguard混淆代码，需确保不要混淆SDK的代码。 请在proguard.cfg文件(或其他混淆文件)尾部添加如下配置:
