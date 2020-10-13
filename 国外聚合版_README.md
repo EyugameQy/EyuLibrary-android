@@ -72,7 +72,7 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'com.eyu:eyulibrary:1.5.3'
+    implementation 'com.eyu:eyulibrary:1.5.5'
     
     //cocos的项目可能会出现okhttp冲突的情况，可以加入以下代码
     configurations {
