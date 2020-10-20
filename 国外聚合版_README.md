@@ -32,6 +32,8 @@ buildscript {
 
     dependencies {
        classpath 'com.android.tools.build:gradle:3.5.2'
+       //如果接入的是cocos框架，用下面的gradle版本，不然编译不通过
+       //classpath 'com.android.tools.build:gradle:3.2.0' 
         classpath 'com.google.gms:google-services:4.2.0' 
         classpath 'com.google.firebase:firebase-crashlytics-gradle:2.3.0'
     }
@@ -72,7 +74,7 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'com.eyu:eyulibrary:1.5.5'
+    implementation 'com.eyu:eyulibrary:1.5.9'
     
     //cocos的项目可能会出现okhttp冲突的情况，可以加入以下代码
     configurations {
@@ -209,7 +211,7 @@ EyuRemoteConfigHelper.fetchRemoteConfig();
             }
 
             @Override
-            public void onAdLoadFailed(String placeId, String key, int code) {
+            public void onAdLoadFailed(String type,String placeId, String key, int code) {
 
             }
 
