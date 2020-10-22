@@ -120,7 +120,7 @@ SdkHelper.initAppFlyerSdk("key", new AppsFlyerConversionListener(){
     }
 }, this.getApplication(), "uninstallKey");
 
-
+//远程配置相关，不用可以不加
 Map<String, Object> defaultsMap = new HashMap<>();
 defaultsMap.put("key","defaultValue");
 EyuRemoteConfigHelper.initRemoteConfig(this, defaultsMap);
