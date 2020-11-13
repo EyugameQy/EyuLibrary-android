@@ -11,6 +11,9 @@ https://developer.android.com/jetpack/androidx/migrate/artifact-mappings
 类的对应关系请参考：
 https://developer.android.com/jetpack/androidx/migrate/class-mappings
 
+
+### 最新版本1.6.1
+
 ### 项目的buld.gradle 添加以下内容
 #### 1.5.2开始,dependencies中增加
 
@@ -74,7 +77,7 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'com.eyu:eyulibrary:1.6.0'
+    implementation 'com.eyu:eyulibrary:1.6.1'
     
     //cocos的项目可能会出现okhttp冲突的情况，可以加入以下代码
     configurations {
