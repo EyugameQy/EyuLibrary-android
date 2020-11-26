@@ -331,7 +331,10 @@ EyuAdManager.getInstance().showNativeAd(this, (ViewGroup) findViewById(R.id.rl_n
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/your_gp_app_id" />
-
+        <!--applovin max -->
+       <meta-data
+            android:name="applovin.sdk.key"
+            android:value="@string/applovin_sdk_key" />
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
