@@ -61,7 +61,7 @@ dependencies {
 ### SDK使用
 #### 初始化sdk
 ```java
-//添加配置信息，按需添加
+//在Application中初始化，添加配置信息，按需添加
 InitializerBuilderImpl builder = new InitializerBuilderImpl();
 //appsflyer
 //builder.initAppsFlyer("key");
@@ -71,7 +71,7 @@ InitializerBuilderImpl builder = new InitializerBuilderImpl();
 //builder.initUmeng("appKey","channle");
 
 //builder.initThinkData("key","serverUrl");
-SdkCompat.getInstance().init(this, builder);
+SdkCompat.getInstance().init(Application, builder);
 
 ```
 

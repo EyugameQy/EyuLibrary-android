@@ -66,7 +66,7 @@ dependencies {
 ### SDK使用
 #### 初始化sdk
 ```java
-//添加配置信息，按需添加
+//在Application中初始化，添加配置信息，按需添加
 InitializerBuilderImpl builder = new InitializerBuilderImpl();
 //appsflyer配置
 //builder.initAppsFlyer(key);
@@ -79,7 +79,7 @@ InitializerBuilderImpl builder = new InitializerBuilderImpl();
 //defaultsMap.put("key","defaultValue");
 //builder.initRemoteConfig(sDefaultsMap);
 
-SdkCompat.getInstance().init(app, builder);
+SdkCompat.getInstance().init(Application, builder);
 
 ```
 
