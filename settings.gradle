@@ -1,1 +1,1 @@
-include ':app', ':app_overseas', ':app_ch'
+include ':app', ':app_overseas', ':app_ch',':app_ch_new',':app_overseas_new'

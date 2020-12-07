@@ -230,9 +230,10 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onAdLoadFailed(String placeId, String key, int code) {
+            public void onAdLoadFailed(String type, String placeId, String key, int code) {
 
             }
+
 
             @Override
             public void onImpression(String type, String placeId) {
