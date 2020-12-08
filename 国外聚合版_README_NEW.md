@@ -59,34 +59,34 @@ apply plugin: 'com.google.firebase.crashlytics'
 dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
 
-    implementation 'com.eyu.opensdk:core:1.7.1'
-    implementation 'com.eyu.opensdk.ad.mediation:adapter-all:1.7.1'
+    implementation 'com.eyu.opensdk:core:1.7.3'
+    implementation 'com.eyu.opensdk.ad.mediation:adapter-all:1.7.3'
     
 }
 ```
 #### 单独引用某个平台
 ```groovy
     //必须
-    implementation 'com.eyu.opensdk:core:1.7.1'
+    implementation 'com.eyu.opensdk:core:1.7.3'
     //引入所有平台
-    implementation 'com.eyu.opensdk.ad.mediation:adapter-all:1.7.1'
+    implementation 'com.eyu.opensdk.ad.mediation:adapter-all:1.7.3'
     
     //也可以单独引入某一个广告平台
-    implementation 'com.eyu.opensdk.ad.mediation:max-adapter:9.14.10.9'
+    implementation 'com.eyu.opensdk.ad.mediation:max-adapter:9.14.10.10'
     
-    implementation 'com.eyu.opensdk.ad.mediation:admob-adapter:19.5.0.8'
+    implementation 'com.eyu.opensdk.ad.mediation:admob-adapter:19.5.0.10'
     
-    implementation 'com.eyu.opensdk.ad.mediation:facebook-adapter:6.2.0.8'
+    implementation 'com.eyu.opensdk.ad.mediation:facebook-adapter:6.2.0.10'
     
-    implementation 'com.eyu.opensdk.ad.mediation:applovin-adapter:9.14.9.8'
+    implementation 'com.eyu.opensdk.ad.mediation:applovin-adapter:9.14.9.10'
     
-    implementation 'com.eyu.opensdk.ad.mediation:mtg-adapter:15.2.41.8'
+    implementation 'com.eyu.opensdk.ad.mediation:mtg-adapter:15.2.41.10'
     
-    implementation 'com.eyu.opensdk.ad.mediation:pangle-adapter:3.1.7.5.8'
+    implementation 'com.eyu.opensdk.ad.mediation:pangle-adapter:3.1.7.5.10'
     
-    implementation 'com.eyu.opensdk.ad.mediation:unity-adapter:3.4.8.8'
+    implementation 'com.eyu.opensdk.ad.mediation:unity-adapter:3.4.8.10'
     
-    implementation 'com.eyu.opensdk.ad.mediation:vungle-adapter:6.8.1.8'
+    implementation 'com.eyu.opensdk.ad.mediation:vungle-adapter:6.8.1.10'
 ```
 
 ### SDK使用

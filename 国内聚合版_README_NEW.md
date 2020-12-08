@@ -50,20 +50,20 @@ repositories {
 dependencies {
     compile(name: 'open_ad_sdk', ext: 'aar')
     implementation 'androidx.multidex:multidex:2.0.1'
-    implementation 'com.eyu.opensdk:core-ch:1.7.1'
-    implementation 'com.eyu.opensdk.ad.mediation:adapter-all-ch:1.7.2'
+    implementation 'com.eyu.opensdk:core-ch:1.7.3'
+    implementation 'com.eyu.opensdk.ad.mediation:adapter-all-ch:1.7.3'
 }
 
 ```
 #### 单独引用某个平台
 ```groovy
 //必须
-implementation 'com.eyu.opensdk:core-ch:1.7.1'
+implementation 'com.eyu.opensdk:core-ch:1.7.3'
 
 //也可以单独引入某一个广告平台
-//implementation 'com.eyu.opensdk.ad.mediation:mtg-ch-adapter:13.0.41.8'
-//implementation 'com.eyu.opensdk.ad.mediation:pangle-ch-adapter:3.3.0.3.9'
-//implementation 'com.eyu.opensdk.ad.mediation:gdt-adapter:4.294.1164.8'
+//implementation 'com.eyu.opensdk.ad.mediation:mtg-ch-adapter:13.0.41.10'
+//implementation 'com.eyu.opensdk.ad.mediation:pangle-ch-adapter:3.3.0.3.10'
+//implementation 'com.eyu.opensdk.ad.mediation:gdt-adapter:4.294.1164.10
 
 ``` 
 #### 头条的库需要单独引入
