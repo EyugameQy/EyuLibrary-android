@@ -55,8 +55,19 @@ dependencies {
 }
 
 ```
-### 头条的库需要单独引入
-将头条的库拷贝到工程目录的libs下，[app_ch_new](https://github.com/EyugameQy/EyuLibrary-android/tree/master/app_ch_new/src/libs）
+#### 单独引用某个平台
+```groovy
+//必须
+implementation 'com.eyu.opensdk:core-ch:1.7.1'
+
+//也可以单独引入某一个广告平台
+//implementation 'com.eyu.opensdk.ad.mediation:mtg-ch-adapter:13.0.41.8'
+//implementation 'com.eyu.opensdk.ad.mediation:pangle-ch-adapter:3.3.0.3.9'
+//implementation 'com.eyu.opensdk.ad.mediation:gdt-adapter:4.294.1164.8'
+
+``` 
+#### 头条的库需要单独引入
+将头条的库拷贝到工程目录的libs下，头条库在这里[app_ch_new](https://github.com/EyugameQy/EyuLibrary-android/tree/master/app_ch_new/src/libs）
 
 ### SDK使用
 #### 初始化sdk
