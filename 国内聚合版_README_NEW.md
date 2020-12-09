@@ -67,7 +67,7 @@ implementation 'com.eyu.opensdk:core-ch:1.7.6'
 
 ``` 
 #### 头条的库需要单独引入
-将头条的库拷贝到工程目录的libs下，头条库在这里[app_ch_new](https://github.com/EyugameQy/EyuLibrary-android/tree/master/app_ch_new/src/libs）
+将头条的库拷贝到工程目录的libs下，头条库在这里[app_ch_new](https://github.com/EyugameQy/EyuLibrary-android/tree/master/app_ch_new/src/libs)
 
 ### SDK使用
 #### 初始化sdk
@@ -126,7 +126,6 @@ adConfig.setAdKeyConfigResource(this, R.raw.ad_key_setting);
 adConfig.setAdGroupConfigResource(this, R.raw.ad_cache_setting);
 //adConfig.setAdGroupConfigStr
 
-adConfig.setReportEvent(true);
         //头条广告
 //        adConfig.setTtClientId("TtClientId");
 //        adConfig.setAppName("test");

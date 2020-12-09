@@ -170,7 +170,6 @@ adConfig.setAdGroupConfigResource(this, R.raw.ad_cache_setting);
 
 //adConfig.setFacebookTestDeviceId("bd1dbca5-8ae6-43e5-949b-44fe9b5fdc4c");
 
-adConfig.setReportEvent(true);
 EyuAdManager.getInstance().config(MainActivity.this, adConfig, new EyuAdsListener() {
 
     @Override
