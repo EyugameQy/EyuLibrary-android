@@ -25,7 +25,7 @@ demo工程为app_overseas_new
 ## 国内版本
 ```groovy
 //必须
-implementation 'com.eyu.opensdk:core-ch:1.7.3'
+implementation 'com.eyu.opensdk:core-ch:1.7.4'
 //引入所有平台
 implementation 'com.eyu.opensdk.ad.mediation:adapter-all-ch:1.7.3'
 
