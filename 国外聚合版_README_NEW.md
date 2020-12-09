@@ -59,7 +59,7 @@ apply plugin: 'com.google.firebase.crashlytics'
 dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
 
-    implementation 'com.eyu.opensdk:core:1.7.3'
+    implementation 'com.eyu.opensdk:core:1.7.6'
     implementation 'com.eyu.opensdk.ad.mediation:adapter-all:1.7.3'
     
 }
@@ -67,7 +67,7 @@ dependencies {
 #### 单独引用某个平台
 ```groovy
     //必须
-    implementation 'com.eyu.opensdk:core:1.7.3'
+    implementation 'com.eyu.opensdk:core:1.7.6'
     //引入所有平台
     implementation 'com.eyu.opensdk.ad.mediation:adapter-all:1.7.3'
     
