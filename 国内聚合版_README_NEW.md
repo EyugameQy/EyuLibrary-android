@@ -207,6 +207,58 @@ EyuAdManager.getInstance().show(AdFormat.NATIVE, Activity,ViewGroup,"adPlaceId")
 EyuAdManager.getInstance().isAdLoaded(AdFormat,"adPlaceId")
 ```
 
+### 事件埋点
+#### 基本数据埋点
+```java
+//事件不带参数
+EventHelper.getInstance().logEvent("事件名称");
+//事件带map参数
+EventHelper.getInstance().logEventWithParamsMap("事件名称",new HashMap<String, Object>());
+//事件带json字符串参数
+EventHelper.getInstance().logEventWithJsonParams("事件名称","json");
+```
+
+#### 数数数据统计
+通过EventHelper.getInstance()调用，[文档](https://docs.thinkingdata.cn/ta-manual/latest/installation/installation_menu/client_sdk/android_sdk_installation/android_sdk_installation.html#%E4%B8%89%E3%80%81%E5%8F%91%E9%80%81%E4%BA%8B%E4%BB%B6)
+<br>
+封装了以下方法
+
+```java
+    void track(String var1);
+
+    void track(String var1, JSONObject var2);
+
+    void timeEvent(String var1);
+
+    void login(String var1);
+
+    void logout();
+
+    void identify(String var1);
+
+    void user_set(JSONObject var1);
+
+    void user_setOnce(JSONObject var1);
+
+    void user_add(JSONObject var1);
+
+    void user_append(JSONObject var1);
+
+    void user_add(String var1, Number var2);
+
+    void user_delete();
+
+    void user_unset(String... var1);
+
+    void setSuperProperties(JSONObject var1);
+
+    void trackAppInstall();
+
+    void trackFirst(String var1, JSONObject var2);
+
+    void trackUpdate(String var1, JSONObject var2, String var3);
+```
+
 ### 配置appsflyer
 [https://support.appsflyer.com/hc/zh-cn/articles/207032126-AppsFlyer-SDK-%E5%AF%B9%E6%8E%A5-Android](https://support.appsflyer.com/hc/zh-cn/articles/207032126-AppsFlyer-SDK-%E5%AF%B9%E6%8E%A5-Android)
 

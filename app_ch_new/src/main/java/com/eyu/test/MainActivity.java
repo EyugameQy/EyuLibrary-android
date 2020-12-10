@@ -11,7 +11,10 @@ import com.eyu.opensdk.ad.EyuAdManager;
 import com.eyu.opensdk.ad.base.listener.EyuAdsListener;
 import com.eyu.opensdk.ad.base.model.AdConfig;
 import com.eyu.opensdk.ad.base.model.AdFormat;
+import com.eyu.opensdk.common.event.EventHelper;
 import com.eyu.opensdk.core.SdkCompat;
+
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
         SdkCompat.getInstance().requestPermissions(this, permissions, 1000);
         initAdConfig();
         initView();
+//        EventHelper.getInstance().logEvent("事件名称");
+//        EventHelper.getInstance().logEventWithParamsMap("事件名称",new HashMap<String, Object>());
+//        EventHelper.getInstance().logEventWithJsonParams("事件名称","json");
+
     }
 
 
@@ -83,18 +90,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        SdkCompat.getInstance().onResume(this);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        SdkCompat.getInstance().onPause(this);
     }
 
     private void initView() {
