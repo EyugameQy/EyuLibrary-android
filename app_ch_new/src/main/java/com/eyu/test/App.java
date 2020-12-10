@@ -14,7 +14,7 @@ public class App extends Application {
         //appsflyer
         //builder.initAppsFlyer("key");
         //热云
-        //builder.initTracking(this,"appKey","channle");
+        builder.initTracking(this,"appKey","channle");
         //友盟
         //builder.initUmeng("appKey","channle");
 
