@@ -223,9 +223,9 @@ EyuAdManager.getInstance().config(MainActivity.this, adConfig, new EyuAdsListene
 EyuAdManager.getInstance().show(AdFormat.REWARDED, Activity,"adPlaceId");
 //插屏
 EyuAdManager.getInstance().show(AdFormat.INTERSTITIAL, Activity,"adPlaceId");
-//banner
+//banner，需要传入一个ViewGroup，这个group是用来放banner的
 EyuAdManager.getInstance().show(AdFormat.BANNER, Activity,ViewGroup,"adPlaceId");
-//原生广告
+//原生广告，需要传入一个ViewGroup，这个group是用来放native的
 EyuAdManager.getInstance().show(AdFormat.NATIVE, Activity,ViewGroup,"adPlaceId");
 
 //show之前可以判断是否有缓存的广告
