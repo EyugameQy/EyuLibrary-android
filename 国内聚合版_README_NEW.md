@@ -51,24 +51,55 @@ dependencies {
     compile(name: 'open_ad_sdk', ext: 'aar')
     implementation 'androidx.multidex:multidex:2.0.1'
     //必须
-    implementation 'com.eyu.opensdk:core-ch:1.7.10'
+    implementation 'com.eyu.opensdk:core-ch:1.7.13'
     //广告平台
-    implementation 'com.eyu.opensdk.ad.mediation:adapter-all-ch:1.7.3'
+    implementation 'com.eyu.opensdk.ad.mediation:adapter-all-ch:1.7.13'
 }
 
 ```
 #### 单独引用某个广告平台
 ```groovy
 //必须
-implementation 'com.eyu.opensdk:core-ch:1.7.10'
+implementation 'com.eyu.opensdk:core-ch:1.7.13'
 //也可以单独引入某一个广告平台
-//implementation 'com.eyu.opensdk.ad.mediation:mtg-ch-adapter:13.0.41.10'
-//implementation 'com.eyu.opensdk.ad.mediation:pangle-ch-adapter:3.3.0.3.10'
-//implementation 'com.eyu.opensdk.ad.mediation:gdt-adapter:4.294.1164.10
+//implementation 'com.eyu.opensdk.ad.mediation:mtg-ch-adapter:13.0.41.13'
+//implementation 'com.eyu.opensdk.ad.mediation:pangle-ch-adapter:3.3.0.3.13'
+//implementation 'com.eyu.opensdk.ad.mediation:gdt-adapter:4.294.1164.13
 
 ``` 
 #### 头条的库需要单独引入
 将头条的库拷贝到工程目录的libs下，头条库在这里[app_ch_new](https://github.com/EyugameQy/EyuLibrary-android/tree/master/app_ch_new/libs)
+
+#### 清单文件
+```xml
+<provider
+    android:name="com.bytedance.sdk.openadsdk.TTFileProvider"
+    android:authorities="${applicationId}.TTFileProvider"
+    android:exported="false"
+    android:grantUriPermissions="true">
+    <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/eyu_tt_file_path" />
+</provider>
+<provider
+    android:name="com.mintegral.msdk.base.utils.MTGFileProvider"
+    android:authorities="${applicationId}.mtgFileProvider"
+    android:exported="false"
+    android:grantUriPermissions="true">
+    <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/eyu_mtg_file_path"/>
+</provider>
+<provider
+    android:name="com.qq.e.comm.GDTFileProvider"
+    android:authorities="${applicationId}.gdt.fileprovider"
+    android:exported="false"
+    android:grantUriPermissions="true">
+    <meta-data
+     android:name="android.support.FILE_PROVIDER_PATHS"
+     android:resource="@xml/eyu_gdt_file_path" />
+</provider>
+```
 
 ### SDK使用
 #### 初始化sdk

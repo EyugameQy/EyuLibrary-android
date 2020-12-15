@@ -44,6 +44,11 @@ android {
     packagingOptions {
         exclude 'META-INF/proguard/androidx-annotations.pro'
     }
+    sourceSets {
+        main {
+            res.srcDirs += 'topon_res'
+        }
+    }
 }
 repositories {
     flatDir {
@@ -54,10 +59,11 @@ repositories {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation(name: 'open_ad_sdk', ext: "aar")
+    api fileTree(include: ['*.jar','*.aar'], dir: 'topon_libs')
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.eyu.opensdk:core-ch:1.7.7'
-    implementation 'com.eyu.opensdk.ad.mediation:adapter-all-ch:1.7.2'
+    implementation 'com.eyu.opensdk:core-ch:1.7.13'
+    implementation 'com.eyu.opensdk.ad.mediation:adapter-all-ch:1.7.13'
 }
