@@ -50,6 +50,29 @@ dependencies {
 }
 ...
 ```
+
+#### 2.1 将配置文件放到res目录下的raw文件夹下，没有raw就新建raw
+配置文件小写，不能以数字开头
+ad_cache_setting.json  <br>
+ad_key_setting.json  <br>
+ad_setting.json  <br>
+ad_setting的格式如下，下面展示广告就是用到json里面的id字段值	
+"[\n" +
+	"  {\n" +
+	"    \"isEnabled\":\"true\",\n" +
+	"    \"desc\":\"激励视频\",\n" +
+	"    \"id\":\"reward_ad\",\n" +
+	"    \"nativeAdLayout\":\"\",\n" +
+	"    \"cacheGroup\":\"reward_ad_group\"\n" +
+	"  },\n" +
+	"  {\n" +
+	"    \"isEnabled\":\"true\",\n" +
+	"    \"desc\":\"插屏\",\n" +
+	"    \"id\":\"inter_ad\",\n" +
+	"    \"nativeAdLayout\":\"\",\n" +
+	"    \"cacheGroup\":\"inter_ad_group\"\n" +
+	"  }\n" +
+	"]"
 ### 3.配置multiDexEnabled
 https://developer.android.com/studio/build/multidex
 
@@ -135,63 +158,9 @@ https://developer.android.com/studio/build/multidex
 ```java
     private void initAdConfig() {
         AdConfig adConfig = new AdConfig();
-
-        //游戏内广告位配置，每个广告位对应一个广告缓存池（cacheGroup）
-        adConfig.setAdPlaceConfigStr("[\n" +
-                "  {\n" +
-                "    \"isEnabled\":\"true\",\n" +
-                "    \"desc\":\"激励视频\",\n" +
-                "    \"id\":\"reward_ad\",\n" +
-                "    \"nativeAdLayout\":\"\",\n" +
-                "    \"cacheGroup\":\"reward_ad_group\"\n" +
-                "  },\n" +
-                "  {\n" +
-                "    \"isEnabled\":\"true\",\n" +
-                "    \"desc\":\"插屏\",\n" +
-                "    \"id\":\"inter_ad\",\n" +
-                "    \"nativeAdLayout\":\"\",\n" +
-                "    \"cacheGroup\":\"inter_ad_group\"\n" +
-                "  }\n" +
-                "]");
-        /**广告key配置，从广告平台获取，
-         *     NETWORK_WM = "wm";
-        **/
-        adConfig.setAdKeyConfigStr("[{\n" +
-                "    \"id\":\"wm_inter_ad\",\n" +
-                "    \"key\":\"910560544\",\n" +
-                "    \"network\":\"wm\"\n" +
-                "  },\n" +
-                "  {\n" +
-                "    \"id\":\"wm_reward_ad\",\n" +
-                "    \"key\":\"910560534\",\n" +
-                "    \"network\":\"wm\"\n" +
-                "  }]");
-        /**广告缓存池配置，一个缓存池对应一到多个key
-         * TYPE_REWARD_AD = "rewardAd";
-         * TYPE_INTERSTITIAL_AD = "interstitialAd";
-         * TYPE_NATIVE_AD = "nativeAd";
-         */
-        adConfig.setAdGroupConfigStr("[\n" +
-                "  {\n" +
-                "    \"keys\":\"[\\\"wm_reward_ad\\\"]\",\n" +
-                "    \"type\":\"rewardAd\",\n" +
-                "    \"id\":\"reward_ad_group\",\n" +
-                "    \"isAutoLoad\":\"true\"\n" +
-                "  },\n" +
-                "  {\n" +
-                "    \"keys\":\"[]\",\n" +
-                "    \"type\":\"nativeAd\",\n" +
-                "    \"id\":\"native_ad_group\",\n" +
-                "    \"isAutoLoad\":\"true\"\n" +
-                "  },\n" +
-                "  {\n" +
-                "    \"keys\":\"[\\\"wm_inter_ad\\\"]\",\n" +
-                "    \"type\":\"interstitialAd\",\n" +
-                "    \"id\":\"inter_ad_group\",\n" +
-                "    \"isAutoLoad\":\"true\"\n" +
-                "  }\n" +
-                "]");
-
+       adConfig.setAdPlaceConfigStr(SdkHelper.readRawString(this, R.raw.ad_setting));
+	adConfig.setAdKeyConfigStr(SdkHelper.readRawString(this, R.raw.ad_key_setting));
+	adConfig.setAdGroupConfigStr(SdkHelper.readRawString(this, R.raw.ad_cache_setting));
         adConfig.setTtClientId("TtClientId");
         adConfig.setAppName("test");
 
