@@ -1,0 +1,20 @@
+[
+  {
+    "keys": "[\"mobrain_jl\"]",
+    "type": "rewardAd",
+    "id": "reward_ad_group",
+    "isAutoLoad": "true"
+  },
+  {
+    "keys": "[\"mobrain_ys\"]",
+    "type": "nativeAd",
+    "id": "play_result_native_ad",
+    "isAutoLoad": "false"
+  },
+  {
+    "keys": "[\"mobrain_cp\"]",
+    "type": "interstitialAd",
+    "id": "inter_ad_group",
+    "isAutoLoad": "true"
+  }
+]
