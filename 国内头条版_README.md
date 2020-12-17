@@ -56,7 +56,7 @@ dependencies {
 ad_cache_setting.json  <br>
 ad_key_setting.json  <br>
 ad_setting.json  <br>
-ad_setting的格式如下，下面展示广告就是用到json里面的id字段值	
+ad_setting的格式如下，下面展示广告就是用到json里面的id字段值	 <br>
 ```json
 	"[\n" +
 	"  {\n" +
