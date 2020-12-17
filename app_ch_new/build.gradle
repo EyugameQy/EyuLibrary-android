@@ -64,6 +64,6 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.eyu.opensdk:core-ch:1.7.13'
-    implementation 'com.eyu.opensdk.ad.mediation:adapter-all-ch:1.7.13'
+    implementation 'com.eyu.opensdk:core-ch:1.7.14'
+    implementation 'com.eyu.opensdk.ad.mediation:adapter-all-ch:1.7.14'
 }
