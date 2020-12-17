@@ -57,7 +57,8 @@ ad_cache_setting.json  <br>
 ad_key_setting.json  <br>
 ad_setting.json  <br>
 ad_setting的格式如下，下面展示广告就是用到json里面的id字段值	
-"[\n" +
+```json
+	"[\n" +
 	"  {\n" +
 	"    \"isEnabled\":\"true\",\n" +
 	"    \"desc\":\"激励视频\",\n" +
@@ -73,6 +74,8 @@ ad_setting的格式如下，下面展示广告就是用到json里面的id字段�
 	"    \"cacheGroup\":\"inter_ad_group\"\n" +
 	"  }\n" +
 	"]"
+```
+
 ### 3.配置multiDexEnabled
 https://developer.android.com/studio/build/multidex
 
