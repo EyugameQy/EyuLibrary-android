@@ -59,34 +59,56 @@ apply plugin: 'com.google.firebase.crashlytics'
 dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
 
-    implementation 'com.eyu.opensdk:core:1.7.13'
-    implementation 'com.eyu.opensdk.ad.mediation:adapter-all:1.7.13'
+    implementation 'com.eyu.opensdk:core:1.7.14'
+    //引入所以国外平台，不建议
+    implementation 'com.eyu.opensdk.ad.mediation:adapter-all:1.7.14'
+    //也可以单独引入某一个广告平台
+    //admob    
+    //implementation 'com.eyu.opensdk.ad.mediation:admob-adapter:19.5.0.14'
+    //admob聚合
+    //implementation 'com.eyu.opensdk.ad.mediation:admob-compat_adapter:19.5.0.15'
     
+    //implementation 'com.eyu.opensdk.ad.mediation:max-adapter:9.14.10.14'
+    
+    //implementation 'com.eyu.opensdk.ad.mediation:facebook-adapter:6.2.0.14'
+    
+    //implementation 'com.eyu.opensdk.ad.mediation:applovin-adapter:9.14.10.14'
+    
+    //implementation 'com.eyu.opensdk.ad.mediation:mtg-adapter:15.2.41.14'
+    
+    //implementation 'com.eyu.opensdk.ad.mediation:pangle-adapter:3.1.7.5.14'
+    
+    //implementation 'com.eyu.opensdk.ad.mediation:unity-adapter:3.4.8.14'
+    
+    //implementation 'com.eyu.opensdk.ad.mediation:vungle-adapter:6.8.1.14'
 }
 ```
 #### 单独引用某个平台
 ```groovy
     //必须
-    implementation 'com.eyu.opensdk:core:1.7.13'
+    implementation 'com.eyu.opensdk:core:1.7.14'
     //引入所有平台
-    implementation 'com.eyu.opensdk.ad.mediation:adapter-all:1.7.13'
+    implementation 'com.eyu.opensdk.ad.mediation:adapter-all:1.7.14'
     
     //也可以单独引入某一个广告平台
-    implementation 'com.eyu.opensdk.ad.mediation:max-adapter:9.14.10.13'
     
-    implementation 'com.eyu.opensdk.ad.mediation:admob-adapter:19.5.0.13'
+    implementation 'com.eyu.opensdk.ad.mediation:admob-adapter:19.5.0.14'
+    //admob聚合
+    implementation 'com.eyu.opensdk.ad.mediation:admob-compat_adapter:19.5.0.15'
+
+    implementation 'com.eyu.opensdk.ad.mediation:max-adapter:9.14.10.14'
     
-    implementation 'com.eyu.opensdk.ad.mediation:facebook-adapter:6.2.0.13'
+    implementation 'com.eyu.opensdk.ad.mediation:facebook-adapter:6.2.0.14'
     
-    implementation 'com.eyu.opensdk.ad.mediation:applovin-adapter:9.14.10.13'
+    implementation 'com.eyu.opensdk.ad.mediation:applovin-adapter:9.14.10.14'
     
-    implementation 'com.eyu.opensdk.ad.mediation:mtg-adapter:15.2.41.13'
+    implementation 'com.eyu.opensdk.ad.mediation:mtg-adapter:15.2.41.14'
     
-    implementation 'com.eyu.opensdk.ad.mediation:pangle-adapter:3.1.7.5.13'
+    implementation 'com.eyu.opensdk.ad.mediation:pangle-adapter:3.1.7.5.14'
     
-    implementation 'com.eyu.opensdk.ad.mediation:unity-adapter:3.4.8.13'
+    implementation 'com.eyu.opensdk.ad.mediation:unity-adapter:3.4.8.14'
     
-    implementation 'com.eyu.opensdk.ad.mediation:vungle-adapter:6.8.1.13'
+    implementation 'com.eyu.opensdk.ad.mediation:vungle-adapter:6.8.1.14'
 ```
 
 ### SDK使用
@@ -310,11 +332,6 @@ EventHelper.getInstance().logEventWithJsonParams("事件名称","json");
     void trackUpdate(String var1, JSONObject var2, String var3);
 ```
 
-
-
-### 配置appsflyer
-[https://support.appsflyer.com/hc/zh-cn/articles/207032126-AppsFlyer-SDK-%E5%AF%B9%E6%8E%A5-Android](https://support.appsflyer.com/hc/zh-cn/articles/207032126-AppsFlyer-SDK-%E5%AF%B9%E6%8E%A5-Android)
-
 ### 测试
 **强烈建议使用VPN挂到美国测试**，没有广告请检查日志打印，过滤onAdLoadFailed,一般失都是广告没有填充
 #### 谷歌
@@ -340,4 +357,7 @@ I/Ads: Use AdRequest.Builder.addTestDevice("68F0142924806103623C22CBA2697DB1") t
 #### Facebook
 检测logcat输出，过滤"Test mode device hash"，将其添加到初始化配置
 
+
+### 配置appsflyer
+[https://support.appsflyer.com/hc/zh-cn/articles/207032126-AppsFlyer-SDK-%E5%AF%B9%E6%8E%A5-Android](https://support.appsflyer.com/hc/zh-cn/articles/207032126-AppsFlyer-SDK-%E5%AF%B9%E6%8E%A5-Android)
 
