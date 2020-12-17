@@ -52,11 +52,11 @@ dependencies {
 ```
 
 #### 2.1 将配置文件放到res目录下的raw文件夹下，没有raw就新建raw
-配置文件小写，不能以数字开头
-ad_cache_setting.json  <br>
-ad_key_setting.json  <br>
-ad_setting.json  <br>
-ad_setting的格式如下，下面展示广告就是用到json里面的id字段值	 <br>
+配置文件小写，不能以数字开头<br>
+ad_cache_setting.json  广告缓存<br>
+ad_key_setting.json  广告key<br>
+ad_setting.json  广告位<br>
+ad_setting.json的格式如下，下面展示广告就是用到json里面的id字段值	 <br>
 ```json
 	"[\n" +
 	"  {\n" +
@@ -261,10 +261,13 @@ http://ad.toutiao.com/union/media/support/custom17#1.2%20AndroidManifest%E9%85%8
 ```
 
 ### 12.展示激励视频
+传入的参数是2.1中提到的id值<br>
 ```java
+传入的参数是2.1中提到的id值<br>
 EyuAdManager.getInstance().showRewardedVideoAd(MainActivity.this, "reward_ad");
 ```
 ### 13.展示插屏广告
+
 ```java
 EyuAdManager.getInstance().showInterstitialAd(MainActivity.this, "inter_ad");
 ```
