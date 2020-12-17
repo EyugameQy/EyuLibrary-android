@@ -113,7 +113,7 @@ SdkCompat.getInstance().init(Application, builder);
 #### 配置
 广告配置有三个文件，一般放在res/raw下，具体见[demo app_overseas](https://github.com/EyugameQy/EyuLibrary-android/tree/master/app_overseas)，分别的含义如下：
 ##### ad_setting.json
-广告位配置
+广告位配置，展示广告传入的adPlaceId就是id的值
 ```json
 [
     {
@@ -247,10 +247,11 @@ EyuAdManager.getInstance().isAdLoaded(AdFormat,"adPlaceId")
         <meta-data
             android:name="applovin.sdk.key"
             android:value="@string/applovin_sdk_key" />
-    <provider
-        android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
-        android:authorities="${applicationId}.TTMultiProvider"
-        android:exported="false" />
+        <!-- 穿山甲-->
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
+            android:authorities="${applicationId}.TTMultiProvider"
+            android:exported="false" />
     </application>
 </manifest>
 
