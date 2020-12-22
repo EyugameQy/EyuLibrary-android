@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.eyu.opensdk.ad.EyuAdManager;
-import com.eyu.opensdk.ad.base.listener.EyuAdsListener;
+import com.eyu.opensdk.ad.EyuAdsListener;
 import com.eyu.opensdk.ad.base.model.AdConfig;
 import com.eyu.opensdk.ad.base.model.AdFormat;
 import com.google.android.gms.ads.identifier.AdvertisingIdClient;
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initSDK();
+        initAdConfig();
         initView();
         new Thread(new Runnable() {
             @Override
@@ -45,15 +45,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void initSDK() {
-        initAdConfig();
-    }
-
     private void initView() {
 
         findViewById(R.id.btnLoadRewardAd).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //手动加载激励视频
                 EyuAdManager.getInstance().loadAd(AdFormat.REWARDED, "reward_ad");
             }
         });
@@ -61,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnShowRewardAd).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //展示激励视频
                 EyuAdManager.getInstance().show(AdFormat.REWARDED, MainActivity.this, "reward_ad");
             }
         });
@@ -68,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnLoadInterAd).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //加载插屏
                 EyuAdManager.getInstance().loadAd(AdFormat.INTERSTITIAL, "main_view_inter_ad");
             }
         });
@@ -75,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnShowInterAd).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //展示插屏
                 EyuAdManager.getInstance().show(AdFormat.INTERSTITIAL, MainActivity.this, "main_view_inter_ad");
             }
         });
@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnShowNativeAd).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //展示原生
                 EyuAdManager.getInstance().show(AdFormat.NATIVE, MainActivity.this, (ViewGroup) findViewById(R.id.nativeRoot), "page_view_native_ad");
             }
         });
@@ -120,27 +121,27 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onAdReward(AdFormat adFormat, String s) {
-
+                //激励视频获得奖励
             }
 
             @Override
             public void onAdLoaded(AdFormat adFormat, String s) {
-
+                //广告加载成功
             }
 
             @Override
             public void onAdShowed(AdFormat adFormat, String s) {
-
+                //广告展示
             }
 
             @Override
             public void onAdClosed(AdFormat adFormat, String s) {
-
+                //广告关闭
             }
 
             @Override
             public void onAdClicked(AdFormat adFormat, String s) {
-
+                //点击广告
             }
 
             @Override
@@ -150,12 +151,12 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onAdLoadFailed(AdFormat adFormat, String s, String s1, int i) {
-
+                //广告加载失败
             }
 
             @Override
             public void onImpression(AdFormat adFormat, String s) {
-
+                //广告展示
             }
         });
     }

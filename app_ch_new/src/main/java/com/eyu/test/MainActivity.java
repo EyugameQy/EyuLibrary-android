@@ -8,10 +8,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.eyu.opensdk.ad.EyuAdManager;
-import com.eyu.opensdk.ad.base.listener.EyuAdsListener;
+import com.eyu.opensdk.ad.EyuAdsListener;
 import com.eyu.opensdk.ad.base.model.AdConfig;
 import com.eyu.opensdk.ad.base.model.AdFormat;
-import com.eyu.opensdk.common.event.EventHelper;
 import com.eyu.opensdk.core.SdkCompat;
 
 import java.util.HashMap;
@@ -52,27 +51,27 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onAdReward(AdFormat adFormat, String s) {
-
+                //激励视频获得奖励
             }
 
             @Override
             public void onAdLoaded(AdFormat adFormat, String s) {
-
+                //广告加载成功
             }
 
             @Override
             public void onAdShowed(AdFormat adFormat, String s) {
-
+                //广告展示
             }
 
             @Override
             public void onAdClosed(AdFormat adFormat, String s) {
-
+                //广告关闭
             }
 
             @Override
             public void onAdClicked(AdFormat adFormat, String s) {
-
+                //点击广告
             }
 
             @Override
@@ -82,12 +81,12 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onAdLoadFailed(AdFormat adFormat, String s, String s1, int i) {
-
+                //广告加载失败
             }
 
             @Override
             public void onImpression(AdFormat adFormat, String s) {
-
+                //广告展示
             }
         });
     }
