@@ -32,7 +32,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.multidex:multidex:2.0.1'
-    implementation 'com.eyu.opensdk:core:1.7.15'
+    implementation 'com.eyu.opensdk:core:1.7.19'
     implementation 'com.eyu.opensdk.ad.mediation:adapter-all:1.7.15'
     //不需要引入
     implementation("com.google.android.gms:play-services-ads-identifier:17.0.0")
