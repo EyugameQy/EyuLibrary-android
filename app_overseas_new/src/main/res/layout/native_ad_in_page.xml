@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,14 +7,14 @@
     android:layout_height="match_parent"
     android:layoutDirection="ltr">
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0" />
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/native_ad_layout"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -25,7 +25,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline_top">
 
-        <android.support.constraint.Guideline
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_middle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -76,6 +76,7 @@
             android:ellipsize="marquee"
             android:singleLine="true"
             tools:text="BALL VS BLOCK"
+            android:textColor="@color/ad_gray_black"
             android:textSize="17dp"
             app:layout_constraintLeft_toRightOf="@+id/native_ad_icon"
             app:layout_constraintRight_toLeftOf="@+id/native_ad_call_btn"
@@ -134,10 +135,10 @@
             android:layout_height="20dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/banner_native_ad_layout"
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -228,16 +229,16 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_dialog_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.076" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_dialog_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -245,4 +246,4 @@
         app:layout_constraintGuide_begin="20dp"
         app:layout_constraintGuide_percent="0.924" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

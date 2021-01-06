@@ -7,10 +7,13 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.eyu.opensdk.ad.AdConfig;
+import com.eyu.opensdk.ad.AdPlatform;
 import com.eyu.opensdk.ad.EyuAdManager;
 import com.eyu.opensdk.ad.EyuAdsListener;
-import com.eyu.opensdk.ad.base.model.AdConfig;
 import com.eyu.opensdk.ad.base.model.AdFormat;
+import com.eyu.opensdk.ad.base.model.PlatformExtras;
+import com.eyu.opensdk.ad.mediation.pangle.PangleExtras;
 import com.eyu.opensdk.core.SdkCompat;
 
 import java.util.HashMap;
@@ -35,18 +38,33 @@ public class MainActivity extends AppCompatActivity {
 
     private void initAdConfig() {
         AdConfig adConfig = new AdConfig();
+        adConfig.setDebugMode(BuildConfig.DEBUG);
         adConfig.setAdPlaceConfigResource(this, R.raw.and_ad_setting);
         adConfig.setAdKeyConfigResource(this, R.raw.and_ad_key_setting);
         adConfig.setAdGroupConfigResource(this, R.raw.and_ad_cache_setting);
-        adConfig.setReportEvent(true);
-        //头条广告
-//        adConfig.setTtClientId("TtClientId");
-//        adConfig.setAppName("test");
-        //Mintegral广告
-//        adConfig.setMintegralAppId("AppId");
-//        adConfig.setMintegralAppKey("AppKey");
-        //广点通
-//        adConfig.setGdtAppId("");
+
+//穿山甲
+        Bundle bundle = new Bundle();
+        bundle.putString(PlatformExtras.COMMON_APP_ID, "");
+        bundle.putString(PangleExtras.APP_NAME, "");
+        adConfig.addPlatformConfig(AdPlatform.PANGLE, bundle);
+
+//mtg
+        bundle = new Bundle();
+        bundle.putString(PlatformExtras.COMMON_APP_ID, "");
+        bundle.putString(PlatformExtras.COMMON_APP_KEY, "");
+        adConfig.addPlatformConfig(AdPlatform.MTG, bundle);
+
+//TOPON
+        bundle = new Bundle();
+        bundle.putString(PlatformExtras.COMMON_APP_ID, "");
+        bundle.putString(PlatformExtras.COMMON_APP_KEY, "");
+        adConfig.addPlatformConfig(AdPlatform.TOPON, bundle);
+
+//广点通
+        bundle = new Bundle();
+        bundle.putString(PlatformExtras.COMMON_APP_ID, "");
+        adConfig.addPlatformConfig(AdPlatform.GDT, bundle);
         EyuAdManager.getInstance().config(MainActivity.this, adConfig, new EyuAdsListener() {
 
             @Override

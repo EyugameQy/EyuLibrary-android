@@ -1,9 +1,0 @@
-[
-    {
-    "keys":"[\"and_facebook_reward_ad\",\"and_admob_reward_ad\"]",
-        "type":"rewardAd",
-        "id":"reward_ad",
-        "isAutoLoad":"true"
-    }
-]
-

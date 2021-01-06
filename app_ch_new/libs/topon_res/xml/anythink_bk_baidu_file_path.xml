@@ -5,7 +5,11 @@
   ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
   -->
 
-<paths>
-    <external-path name="external_files" path="."/>
-    <root-path name="root" path="" />
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-files-path
+        name="bdpath"
+        path="bddownload/" />
+    <external-path
+        name="bdpathsd "
+        path="bddownload/" />
 </paths>

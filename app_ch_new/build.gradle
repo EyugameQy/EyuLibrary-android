@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.eyu.test"
         minSdkVersion 17
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -59,11 +59,22 @@ repositories {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation(name: 'open_ad_sdk', ext: "aar")
-    api fileTree(include: ['*.jar','*.aar'], dir: 'topon_libs')
+//    api fileTree(include: ['*.jar','*.aar'], dir: 'topon_libs')
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.eyu.opensdk:core-ch:1.7.19'
-    implementation 'com.eyu.opensdk.ad.mediation:adapter-all-ch:1.7.19'
+
+
+
+    implementation 'com.eyu.opensdk:core-ch:1.7.21'
+    //mtg
+    //implementation 'com.eyu.opensdk.ad.mediation:mtg-ch-adapter:13.0.41.21'
+    //穿山甲
+    implementation 'com.eyu.opensdk.ad.mediation:pangle-ch-adapter:3.3.0.3.21'
+    //广点通
+    //implementation 'com.eyu.opensdk.ad.mediation:gdt-adapter:4.294.1164.21'
+    //topon
+    //implementation 'com.eyu.opensdk.ad.mediation:topon-adapter:5.7.3.21'
 }

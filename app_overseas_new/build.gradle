@@ -12,7 +12,7 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -30,10 +30,41 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.multidex:multidex:2.0.1'
-    implementation 'com.eyu.opensdk:core:1.7.19'
-    implementation 'com.eyu.opensdk.ad.mediation:adapter-all:1.7.15'
-    //不需要引入
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation("com.google.android.gms:play-services-ads-identifier:17.0.0")
+
+
+    implementation 'com.eyu.opensdk:core:1.7.21'
+    //admob
+    //implementation 'com.eyu.opensdk.ad.mediation:admob-adapter:19.6.0.21'
+
+    //admob聚合
+    //implementation 'com.eyu.opensdk.ad.mediation:admob-compat_adapter:19.6.0.21'
+
+    //max
+    //implementation 'com.eyu.opensdk.ad.mediation:max-adapter:9.14.11.21'
+
+    //facebook
+    //implementation 'com.eyu.opensdk.ad.mediation:facebook-adapter:6.2.0.21'
+
+    //applovin
+    //implementation 'com.eyu.opensdk.ad.mediation:applovin-adapter:9.14.11.21'
+
+    //mtg
+    //implementation 'com.eyu.opensdk.ad.mediation:mtg-adapter:15.2.41.21'
+
+    //穿山甲
+    implementation 'com.eyu.opensdk.ad.mediation:pangle-adapter:3.4.0.0.21'
+
+    //unity
+    //implementation 'com.eyu.opensdk.ad.mediation:unity-adapter:3.4.8.21'
+
+    //vungle
+    //implementation 'com.eyu.opensdk.ad.mediation:vungle-adapter:6.8.1.21'
+
+    //tradplus
+    //implementation 'com.eyu.opensdk.ad.mediation:tradplus-adapter:5.2.8.1.21'
 }

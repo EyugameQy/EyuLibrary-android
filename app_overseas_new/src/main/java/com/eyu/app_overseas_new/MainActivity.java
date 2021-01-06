@@ -9,14 +9,17 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.eyu.opensdk.ad.AdConfig;
+import com.eyu.opensdk.ad.AdPlatform;
 import com.eyu.opensdk.ad.EyuAdManager;
 import com.eyu.opensdk.ad.EyuAdsListener;
-import com.eyu.opensdk.ad.base.model.AdConfig;
 import com.eyu.opensdk.ad.base.model.AdFormat;
+import com.eyu.opensdk.ad.base.model.PlatformExtras;
+import com.eyu.opensdk.ad.mediation.pangle.PangleExtras;
 import com.google.android.gms.ads.identifier.AdvertisingIdClient;
 
-public class MainActivity extends AppCompatActivity {
 
+public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,11 +114,53 @@ public class MainActivity extends AppCompatActivity {
 
     private void initAdConfig() {
         AdConfig adConfig = new AdConfig();
+        adConfig.setDebugMode(BuildConfig.DEBUG);
         adConfig.setAdPlaceConfigResource(this, R.raw.and_ad_setting);
         adConfig.setAdKeyConfigResource(this, R.raw.and_ad_key_setting);
         adConfig.setAdGroupConfigResource(this, R.raw.and_ad_cache_setting);
-//        adConfig.setAdmobTestDeviceIds(Arrays.asList("68F0142924806103623C22CBA2697DB1"));
-//        adConfig.setFacebookTestDeviceId("bd1dbca5-8ae6-43e5-949b-44fe9b5fdc4c");
+        //admob
+        Bundle bundle = new Bundle();
+        //appid 在Manifest中配置
+        //添加测试设备
+//        bundle.putStringArrayList(PlatformExtras.COMMON_TEST_DEVICE, new ArrayList<String>(Arrays.asList("")));
+        adConfig.addPlatformConfig(AdPlatform.ADMOB, bundle);
+
+//facebook
+        bundle = new Bundle();
+//appid 在Manifest中配置
+        //添加测试设备
+//        bundle.putString(PlatformExtras.COMMON_TEST_DEVICE, "");
+        adConfig.addPlatformConfig(AdPlatform.FACEBOOK, bundle);
+
+//max
+//appid 在Manifest中配置
+
+//穿山甲
+        bundle = new Bundle();
+        bundle.putString(PlatformExtras.COMMON_APP_ID, "");
+        bundle.putString(PangleExtras.APP_NAME, "");
+        adConfig.addPlatformConfig(AdPlatform.PANGLE, bundle);
+
+//unity
+        bundle = new Bundle();
+        bundle.putString(PlatformExtras.COMMON_APP_ID, "");
+        adConfig.addPlatformConfig(AdPlatform.UNITY, bundle);
+
+//vungle
+        bundle = new Bundle();
+        bundle.putString(PlatformExtras.COMMON_APP_ID, "");
+        adConfig.addPlatformConfig(AdPlatform.VUNGLE, bundle);
+
+//mtg
+        bundle = new Bundle();
+        bundle.putString(PlatformExtras.COMMON_APP_ID, "");
+        bundle.putString(PlatformExtras.COMMON_APP_KEY, "");
+        adConfig.addPlatformConfig(AdPlatform.MTG, bundle);
+
+//TRADPLUS
+        bundle = new Bundle();
+        bundle.putString(PlatformExtras.COMMON_APP_ID, "");
+        adConfig.addPlatformConfig(AdPlatform.TRADPLUS, bundle);
         adConfig.setReportEvent(true);
         EyuAdManager.getInstance().config(MainActivity.this, adConfig, new EyuAdsListener() {
 
