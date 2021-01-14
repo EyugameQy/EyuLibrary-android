@@ -68,7 +68,7 @@ dependencies {
 
 
 
-    implementation 'com.eyu.opensdk:core-ch:1.7.21'
+    implementation 'com.eyu.opensdk:core-ch:1.7.22'
     //mtg
     //implementation 'com.eyu.opensdk.ad.mediation:mtg-ch-adapter:13.0.41.21'
     //穿山甲
