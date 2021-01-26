@@ -16,7 +16,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         final InitializerBuilderImpl builder = new InitializerBuilderImpl();
-        //builder.initAppsFlyer("");
+        builder.initAppsFlyer("");
         builder.initRemoteConfig(new HashMap<String, Object>());
         //builder.initThinkData("","");
         SdkCompat.getInstance().init(this, builder);

@@ -37,34 +37,34 @@ dependencies {
     implementation("com.google.android.gms:play-services-ads-identifier:17.0.0")
 
 
-    implementation 'com.eyu.opensdk:core:1.7.22'
+    implementation 'com.eyu.opensdk:core:1.7.24'
     //admob
-    //implementation 'com.eyu.opensdk.ad.mediation:admob-adapter:19.6.0.21'
+    //implementation 'com.eyu.opensdk.ad.mediation:admob-adapter:19.7.0.24'
 
     //admob聚合
-    //implementation 'com.eyu.opensdk.ad.mediation:admob-compat_adapter:19.6.0.21'
+    //implementation 'com.eyu.opensdk.ad.mediation:admob-compat_adapter:19.7.0.24'
 
     //max
-    //implementation 'com.eyu.opensdk.ad.mediation:max-adapter:9.14.12.21'
+    //implementation 'com.eyu.opensdk.ad.mediation:max-adapter:9.15.1.24'
 
     //facebook
-    //implementation 'com.eyu.opensdk.ad.mediation:facebook-adapter:6.2.0.22'
+    //implementation 'com.eyu.opensdk.ad.mediation:facebook-adapter:6.2.0.24'
 
     //applovin
-    //implementation 'com.eyu.opensdk.ad.mediation:applovin-adapter:9.14.12.21'
+    //implementation 'com.eyu.opensdk.ad.mediation:applovin-adapter:9.15.1.24'
 
     //mtg
-    //implementation 'com.eyu.opensdk.ad.mediation:mtg-adapter:15.2.41.21'
+    //implementation 'com.eyu.opensdk.ad.mediation:mtg-adapter:15.2.41.24'
 
     //穿山甲
-    implementation 'com.eyu.opensdk.ad.mediation:pangle-adapter:3.4.0.0.21'
+    implementation 'com.eyu.opensdk.ad.mediation:pangle-adapter:3.4.0.0.24'
 
     //unity
-    //implementation 'com.eyu.opensdk.ad.mediation:unity-adapter:3.4.8.21'
+    //implementation 'com.eyu.opensdk.ad.mediation:unity-adapter:3.4.8.24'
 
     //vungle
-    //implementation 'com.eyu.opensdk.ad.mediation:vungle-adapter:6.8.1.21'
+    //implementation 'com.eyu.opensdk.ad.mediation:vungle-adapter:6.8.1.24'
 
     //tradplus
-    //implementation 'com.eyu.opensdk.ad.mediation:tradplus-adapter:5.2.8.1.21'
+    //implementation 'com.eyu.opensdk.ad.mediation:tradplus-adapter:5.2.8.1.24'
 }

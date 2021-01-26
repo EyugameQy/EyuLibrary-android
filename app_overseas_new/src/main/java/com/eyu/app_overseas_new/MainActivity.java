@@ -161,12 +161,12 @@ public class MainActivity extends AppCompatActivity {
         bundle = new Bundle();
         bundle.putString(PlatformExtras.COMMON_APP_ID, "");
         adConfig.addPlatformConfig(AdPlatform.TRADPLUS, bundle);
-        adConfig.setReportEvent(true);
         EyuAdManager.getInstance().config(MainActivity.this, adConfig, new EyuAdsListener() {
 
             @Override
             public void onAdReward(AdFormat adFormat, String s) {
                 //激励视频获得奖励
+                //type=adFormat.getLabel();
             }
 
             @Override
