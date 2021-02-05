@@ -14,10 +14,11 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         final InitializerBuilderImpl builder = new InitializerBuilderImpl();
+        builder.setDebugMode(true);
         //appsflyer
         //builder.configAppsFlyer("key");
         //热云
-        builder.configTrackingIO("appKey");
+        builder.configTrackingIO("e2fc0295e7cff53cb474cff2861ecf1b");
         //友盟
 //        builder.configUmeng("appKey","channle");
 
