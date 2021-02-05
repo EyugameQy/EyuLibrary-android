@@ -68,11 +68,11 @@ dependencies {
 
 
 
-    implementation 'com.eyu.opensdk:core-ch:1.7.26'
+    implementation 'com.eyu.opensdk:core-ch:1.7.28'
     //mtg
     //implementation 'com.eyu.opensdk.ad.mediation:mtg-ch-adapter:13.0.41.24'
     //穿山甲
-    implementation 'com.eyu.opensdk.ad.mediation:pangle-ch-adapter:3.4.1.2.25'
+    implementation 'com.eyu.opensdk.ad.mediation:pangle-ch-adapter:3.4.1.2.30'
     //广点通
     //implementation 'com.eyu.opensdk.ad.mediation:gdt-adapter:4.294.1164.24'
     //topon

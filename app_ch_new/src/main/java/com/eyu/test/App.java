@@ -15,13 +15,13 @@ public class App extends Application {
         super.onCreate();
         final InitializerBuilderImpl builder = new InitializerBuilderImpl();
         //appsflyer
-        //builder.initAppsFlyer("key");
+        //builder.configAppsFlyer("key");
         //热云
-        builder.initTracking(this,"appKey","channle");
+        builder.configThinkData("appKey");
         //友盟
-        //builder.initUmeng("appKey","channle");
+//        builder.configUmeng("appKey","channle");
 
-        //builder.initThinkData("key","serverUrl");
+//        builder.configThinkData("key");
         SdkCompat.getInstance().init(this, builder);
     }
 
