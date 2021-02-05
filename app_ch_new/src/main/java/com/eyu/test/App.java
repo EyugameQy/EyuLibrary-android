@@ -17,7 +17,7 @@ public class App extends Application {
         //appsflyer
         //builder.configAppsFlyer("key");
         //热云
-        builder.configThinkData("appKey");
+        builder.configTrackingIO("appKey");
         //友盟
 //        builder.configUmeng("appKey","channle");
 
