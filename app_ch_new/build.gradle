@@ -10,17 +10,17 @@ android {
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
-//        ndk { abiFilters  'armeabi-v7a','x86','arm64-v8a','x86_64','armeabi' }
+        ndk { abiFilters  'armeabi-v7a','x86','arm64-v8a','x86_64','armeabi' }
 
     }
 
-//    packagingOptions {
-//        doNotStrip "*/armeabi-v7a/*.so"
-//        doNotStrip "*/x86/*.so"
-//        doNotStrip "*/arm64-v8a/*.so"
-//        doNotStrip "*/x86_64/*.so"
-//        doNotStrip "armeabi.so"
-//    }
+    packagingOptions {
+        doNotStrip "*/armeabi-v7a/*.so"
+        doNotStrip "*/x86/*.so"
+        doNotStrip "*/arm64-v8a/*.so"
+        doNotStrip "*/x86_64/*.so"
+        doNotStrip "armeabi.so"
+    }
     signingConfigs {
 
         release {
@@ -71,7 +71,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 //    implementation(name: 'open_ad_sdk', ext: "aar")
 //    api fileTree(include: ['*.jar','*.aar'], dir: 'topon_libs')
-    implementation 'androidx.multidex:multidex:1.0.3'
+    implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'com.google.android.material:material:1.2.1'
@@ -79,11 +79,11 @@ dependencies {
 
 
 
-    implementation 'com.eyu.opensdk:core-ch:1.7.29'
+    implementation 'com.eyu.opensdk:core-ch:1.7.30'
     //mtg
     //implementation 'com.eyu.opensdk.ad.mediation:mtg-ch-adapter:13.0.41.24'
     //穿山甲
-    implementation 'com.eyu.opensdk.ad.mediation:pangle-ch-adapter:3.4.1.2.30'
+    implementation 'com.eyu.opensdk.ad.mediation:pangle-ch-adapter:3.4.1.2.31'
     //广点通
     //implementation 'com.eyu.opensdk.ad.mediation:gdt-adapter:4.294.1164.24'
     //topon

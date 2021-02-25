@@ -1,0 +1,21 @@
+[
+    {
+        "keys":"[\"and_max_reward_ad\"]",
+        "type":"rewardAd",
+        "id":"reward_ad",
+        "isAutoLoad":"true"
+    },
+	{
+        "keys":"[\"and_max_inter_ad\"]",
+        "type": "interstitialAd",
+        "id": "inter_ad",
+        "isAutoLoad": "true"
+    },
+	{
+        "keys":"[\"and_max_banner_ad\"]",
+        "type": "bannerAd",
+        "id": "banner_ad",
+        "isAutoLoad": "true"
+    }
+
+]

@@ -1,0 +1,17 @@
+[    
+	{
+        "id":"and_max_reward_ad",
+        "key":"0f9d24dcf525400a",
+        "network":"max"
+    },
+	{
+        "id":"and_max_inter_ad",
+        "key":"123f465995e8909f",
+        "network":"max"
+    },
+	{
+        "id":"and_max_banner_ad",
+        "key":"8390e8eb50caf56f",
+        "network":"max"
+    }
+]

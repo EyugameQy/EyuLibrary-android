@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--facebook的app id，替换你自己的-->
+    <string name="facebook_app_id">75042212252241</string>
+    <!--google广告的app id，替换你自己的-->
+    <string name="google_ads_app_id">ca-app-pub-9624926763614741~7843</string>
+    <!--max广告sdk key，这个不用替换-->
+    <string name="applovin_sdk_key">9aiR-8NXTyh84IIr1CWylMWBF4Fkf1Qpc8FaHc6qZoyd4FS6S-2BKZNaecIIdk6EtLq8zwzWiw8o9aucZxovU9</string>
+
+    <bool name="is_overseas">true</bool>
+
+    <!--appsflyer的key-->
+    <string name="appsflyer_key"></string>
+
+    <!--数数的key-->
+    <string name="shushu_key"></string>
+
+    <!--热云的key-->
+    <string name="reyun_key"></string>
+
+    <!--穿山甲的key和app name，一般国内接入需要-->
+    <string name="pangle_key"></string>
+    <string name="pangle_app_name"></string>
+
+</resources>

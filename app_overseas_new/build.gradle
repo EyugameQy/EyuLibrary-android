@@ -45,7 +45,7 @@ dependencies {
     //implementation 'com.eyu.opensdk.ad.mediation:admob-compat_adapter:19.7.0.24'
 
     //max
-    //implementation 'com.eyu.opensdk.ad.mediation:max-adapter:9.15.1.24'
+    implementation 'com.eyu.opensdk.ad.mediation:max-adapter:9.15.1.24'
 
     //facebook
     //implementation 'com.eyu.opensdk.ad.mediation:facebook-adapter:6.2.0.24'

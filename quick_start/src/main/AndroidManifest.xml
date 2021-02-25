@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eyu.opensdk.integration.quick_start">
+
+    <application
+        android:name=".QuickApplication"
+        android:networkSecurityConfig="@xml/network_security_config"
+        >
+        <!-- 海外接入 start-->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/google_ads_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="@string/applovin_sdk_key" />
+
+        <!-- 海外接入 end-->
+    </application>
+
+
+
+</manifest>

@@ -9,3 +9,6 @@ demo工程为app_overseas_new
 https://eyugameqy.github.io/
 demo工程为app_ch_new
 
+## 快速接入库工程
+https://eyugameqy.github.io/
+quick_start

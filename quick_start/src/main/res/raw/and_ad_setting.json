@@ -1,0 +1,24 @@
+[
+    {
+        "isEnabled":"true",
+        "desc":"激励视频",
+        "id":"reward_ad",
+        "nativeAdLayout":"",
+        "cacheGroup":"reward_ad"
+    },
+    {
+        "isEnabled":"true",
+        "desc":"插屏",
+        "id":"inter_ad",
+        "nativeAdLayout":"",
+        "cacheGroup":"inter_ad"
+    },
+    {
+        "isEnabled":"true",
+        "desc":"banner",
+        "id":"banner_ad",
+        "nativeAdLayout":"",
+        "cacheGroup":"banner_ad"
+    }
+	
+]

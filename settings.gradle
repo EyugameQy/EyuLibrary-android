@@ -1,1 +1,3 @@
+include ':app_quick_start'
+include ':quick_start'
 include ':app_ch_new',':app_overseas_new'
