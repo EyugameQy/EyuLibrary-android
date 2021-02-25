@@ -37,6 +37,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation project(':quick_start')
-//    implementation 'com.eyu.opensdk:core-ch:1.7.30'
-    implementation 'com.eyu.opensdk:core:1.7.30'
+//    implementation 'com.eyu.opensdk:core-ch:1.7.31'
+    implementation 'com.eyu.opensdk:core:1.7.31'
 }
