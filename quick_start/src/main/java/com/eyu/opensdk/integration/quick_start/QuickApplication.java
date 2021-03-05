@@ -17,7 +17,7 @@ public class QuickApplication extends Application {
         registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
             @Override
             public void onActivityCreated(@NonNull Activity activity, @Nullable Bundle bundle) {
-                if(activity instanceof ActivityStarter || activity.getClass().getSimpleName().contains("unity")) {
+                if(activity instanceof ActivityStarter || activity.getClass().getSimpleName().toUpperCase().contains("UNITY")) {
                     QuickStarter.getInstance().setActivity(activity);
                     QuickStarter.getInstance().initAd(activity);
                 }
